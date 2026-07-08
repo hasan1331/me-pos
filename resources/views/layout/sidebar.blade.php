@@ -240,14 +240,14 @@
         <div class="text-truncate" data-i18n="Basic">Report Sales</div>
         </a>
     </li>
-        
+      
     <li class="menu-item">
         <a href="cards-basic.html" class="menu-link">
         <i class="menu-icon tf-icons bx bx-cart-download"></i>
         <div class="text-truncate" data-i18n="Basic">Report Purchase</div>
         </a>
     </li>
-
+    
     <!-- Role -->
     <li class="menu-header small text-uppercase"><span class="menu-header-text">Role</span></li>
     <!-- Forms -->
