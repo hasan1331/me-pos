@@ -25634,8 +25634,8 @@ li:not(:first-child) .dropdown-item, .dropdown-menu .dropdown-item:not(:first-ch
 .buy-now .btn-buy-now {
   position: fixed;
   z-index: 1080;
-  -webkit-box-shadow: 0 1px 20px 1px #ff3e1d;
-          box-shadow: 0 1px 20px 1px #ff3e1d;
+  -webkit-box-shadow: 0 1px 20px 1px #4748AD;
+          box-shadow: 0 1px 20px 1px #4748AD;
   inset-block-end: 3rem;
   inset-inline-end: 1.625rem;
 }

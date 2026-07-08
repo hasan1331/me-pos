@@ -29,16 +29,13 @@
 
     <!-- Core CSS -->
     <!-- build:css assets/vendor/css/theme.css  -->
-
     <link rel="stylesheet" href="assets/vendor/css/core.css" />
     <link rel="stylesheet" href="assets/css/demo.css" />
 
     <!-- Vendors CSS -->
-
     <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
     <!-- endbuild -->
-
     <link rel="stylesheet" href="assets/vendor/libs/apex-charts/apex-charts.css" />
 
     <!-- Page CSS -->
@@ -48,9 +45,149 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
 
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-
     <script src="assets/js/config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
+
+  <style>
+    .chat-header{
+        background:linear-gradient(135deg,#3B82F6,#2563EB);
+        color:#fff;
+        padding:35px;
+        text-align:left;
+        position:relative;
+    }
+
+    .chat-header h2{
+        margin-bottom:10px;
+        font-weight:700;
+    }
+
+    .chat-body{
+        padding:25px;
+    }
+
+    .chat-body label{
+        display:block;
+        margin-bottom:6px;
+        font-weight:600;
+    }
+
+    .swal2-input{
+        width:100%!important;
+        margin:0!important;
+    }
+
+    .btn-chat{
+        width:100%;
+        border:none;
+        border-radius:10px;
+        background:#2563EB;
+        color:white;
+        padding:14px;
+        font-size:16px;
+        font-weight:600;
+        transition:.3s;
+    }
+
+    .btn-chat:hover{
+        background:#1D4ED8;
+    }
+
+    .swal2-container{
+        z-index:999999 !important;
+    }
+
+    .live-chat-popup{
+        margin-top:70px;
+        margin-right:20px;
+    }
+
+    .swal2-container{
+        justify-content:flex-end !important;
+        align-items:flex-start !important;
+        padding-top:130px !important;
+        padding-right:20px !important;
+    }
+
+    .swal2-popup{
+        padding:0 !important;
+        border-radius:18px !important;
+        overflow:hidden !important;
+    }
+
+    .swal2-close{
+        position:absolute !important;
+        top:25px;
+        right:25px;
+        width:42px;
+        height:42px;
+        border-radius:50%;
+        background:rgba(255,255,255,.15) !important;
+        backdrop-filter:blur(10px);
+        color:#fff !important;
+        font-size:28px !important;
+        display:flex !important;
+        justify-content:center;
+        align-items:center;
+        transition:.25s;
+        z-index:9999;
+    }
+
+    .swal2-close:hover{
+        background:rgba(0,0,0,.15) !important;
+        transform:rotate(90deg);
+    }
+
+    .swal2-html-container{
+        margin:0 !important;
+        padding:0 !important;
+        overflow:hidden !important;
+    }
+
+    #department{
+        color:#BDBDBD;
+    }
+
+    #department option{
+        color:#212529;
+    }
+
+    #department option[value=""]{
+        color:#BDBDBD;
+    }
+
+    .swal2-input,
+    .swal2-select,
+    .chat-body select {
+
+        width:100% !important;
+        height:44px !important;
+
+        border:1px solid #D9DEE3 !important;
+        border-radius:8px !important;
+
+        background:#fff !important;
+        color:#BDBDBD;
+
+        padding:0 15px !important;
+        outline:none !important;
+        box-shadow:none !important;
+
+        transition:.25s;
+    }
+
+    .swal2-input:focus,
+    .swal2-select:focus,
+    .chat-body select:focus{
+        border:1px solid #696CFF !important;
+        box-shadow:0 0 0 3px rgba(202, 20, 20, 0.15) !important;
+    }
+
+    .btn-buy-now{
+        filter:none !important;
+    }
+  </style>
 
   <body>
     <!-- Layout wrapper -->
@@ -64,9 +201,7 @@
         <!-- Layout container -->
         <div class="layout-page">
           <!-- Navbar -->
-
           @include('layout.navbar')
-
           <!-- / Navbar -->
 
           <!-- Content wrapper -->
@@ -79,7 +214,7 @@
                     <div class="d-flex align-items-start row">
                       <div class="col-sm-7">
                         <div class="card-body">
-                          <h5 class="card-title text-primary mb-3">Congratulations John! 🎉</h5>
+                          <h5 class="card-title text-primary mb-3">Welcome Hasan! 🎉</h5>
                           <p class="mb-6">
                             You have done 72% more sales today.<br />Check your new badge in your profile.
                           </p>
@@ -641,51 +776,7 @@
             <!-- / Content -->
 
             <!-- Footer -->
-            <footer class="content-footer footer bg-footer-theme">
-              <div class="container-xxl">
-                <div
-                  class="footer-container d-flex align-items-center justify-content-between py-4 flex-md-row flex-column">
-                  <div class="mb-2 mb-md-0">
-                    ©
-                    <script>
-                      document.write(new Date().getFullYear());
-                    </script>
-                    , made with ❤️ by
-                    <a href="https://themeselection.com" target="_blank" class="footer-link">ThemeSelection</a>
-                  </div>
-                  <div class="d-none d-lg-inline-block">
-                    <a
-                      href="https://themeselection.com/item/category/admin-templates/"
-                      target="_blank"
-                      class="footer-link me-4"
-                      >Admin Templates</a
-                    >
-
-                    <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
-                    <a
-                      href="https://themeselection.com/item/category/bootstrap-admin-templates/"
-                      target="_blank"
-                      class="footer-link me-4"
-                      >Bootstrap Dashboard</a
-                    >
-
-                    <a
-                      href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation/"
-                      target="_blank"
-                      class="footer-link me-4"
-                      >Documentation</a
-                    >
-
-                    <a
-                      href="https://github.com/themeselection/sneat-bootstrap-html-admin-template-free/issues"
-                      target="_blank"
-                      class="footer-link"
-                      >Support</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </footer>
+            @include('layout.footer')
             <!-- / Footer -->
 
             <div class="content-backdrop fade"></div>
@@ -699,25 +790,143 @@
       <div class="layout-overlay layout-menu-toggle"></div>
     </div>
     <!-- / Layout wrapper -->
-
+    
     <div class="buy-now">
       <a
-        href="https://themeselection.com/item/sneat-dashboard-pro-bootstrap/"
-        target="_blank"
-        class="btn btn-danger btn-buy-now"
-        >Upgrade to Pro</a
-      >
+        href="#"
+        id="btnChat"
+        class="btn btn-primary btn-buy-now"
+        ><i style="font-size:30px;" class="bx bx-support"></i></a>
     </div>
 
+    <script type="text/javascript">
+        
+      document.getElementById("btnChat").addEventListener("click", function () {
+        Swal.fire({
+              position: 'top-end',
+              width: 420,
+              showConfirmButton: false,
+              showCloseButton: true,
+              padding: 0,
+              background: '#fff',
+              backdrop:true,
+
+              allowOutsideClick: false,
+              allowEscapeKey: false,
+              stopKeydownPropagation: true,
+
+              customClass: {
+                  popup: 'live-chat-popup'
+              },
+
+              html: `
+                  <div class="chat-header">
+
+                      <h2><font style="color:white;">Halo</font> 👋</h2>
+
+                      <p>
+                          Silakan isi data berikut agar kami dapat membantu Anda
+                          dengan lebih cepat.
+                      </p>
+
+                  </div>
+
+                  <div class="chat-body">
+                    <table width="100%">
+                      <tr>
+                        <td align="Left">
+                          Department
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                            <select class="swal2-input" id="department">
+                                <option value="" selected disabled>Pilih Department</option>
+                                <option>Sales</option>
+                                <option>Billing</option>
+                                <option>Customer Services</option>
+                                <option>Technical Support</option>
+                            </select>
+                          </td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td align="Left">
+                          Nama Lengkap
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                            <input
+                              id="fullname"
+                              class="swal2-input"
+                              placeholder="Fullname">
+                          </td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td align="Left">
+                          Email
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                            <input
+                              type="email"
+                              id="email"
+                              class="swal2-input"
+                              placeholder="mail@email.com">
+                          </td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td align="Left">
+                          Nomor Telepon
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                            <input
+                              id="phone"
+                              class="swal2-input"
+                              placeholder="+62xxxxxx">
+                          </td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </table>
+
+                    <button class="btn-chat">
+                        Mulai Chat →
+                    </button>
+                  </div>
+              `
+          });
+        });
+
+        const department = document.getElementById('department');
+        department.style.color = '#BDBDBD';
+
+        department.addEventListener('change', function () {
+            this.style.color = '#212529';
+        });
+    </script>
+
     <!-- Core JS -->
-
     <script src="assets/vendor/libs/jquery/jquery.js"></script>
-
     <script src="assets/vendor/libs/popper/popper.js"></script>
     <script src="assets/vendor/js/bootstrap.js"></script>
-
     <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-
     <script src="assets/vendor/js/menu.js"></script>
 
     <!-- endbuild -->
@@ -726,7 +935,6 @@
     <script src="assets/vendor/libs/apex-charts/apexcharts.js"></script>
 
     <!-- Main JS -->
-
     <script src="assets/js/main.js"></script>
 
     <!-- Page JS -->
